@@ -1,6 +1,6 @@
-FROM python:2.7.18-buster
+FROM python:2.7.18
 
-LABEL python=2.7.18-buster
-LABEL scipy=1.2.1
-LABEL numpy=1.16.6
-RUN pip install scipy==1.2.1 numpy==1.16.6
+LABEL python=2.7.18
+LABEL scipy=1.3.3
+LABEL numpy=1.18.2
+RUN pip install scipy==1.3.3 numpy==1.18.2
