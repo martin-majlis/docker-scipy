@@ -73,6 +73,9 @@ for python_version in ${PYTHONS[@]}; do
       cat > ${docker_file} <<- EOM
 FROM python:${python_version}
 
+MAINTAINER martin@majlis.cz
+LABEL maintainer=martin@majlis.cz
+
 LABEL python=${python_version}
 LABEL scipy=${scipy_version}
 LABEL numpy=${numpy_version}
