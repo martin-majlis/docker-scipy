@@ -1,5 +1,8 @@
 FROM python:3.6.9-alpine3.10
 
+MAINTAINER martin@majlis.cz
+LABEL maintainer=martin@majlis.cz
+
 LABEL python=3.6.9-alpine3.10
 LABEL scipy=1.3.0
 LABEL numpy=1.16.6
