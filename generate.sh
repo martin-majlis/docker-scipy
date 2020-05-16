@@ -50,12 +50,15 @@ PYTHONS=(\
 # - https://github.com/scipy/scipy/issues/11319
 # - https://github.com/scipy/scipy/pull/11320
 SCIPYS=(
-    "1.3.3;1.18.2"\
-    "1.3.2;1.17.3"\    
-    "1.3.1;1.17.0"\
-    "1.3.0;1.16.6"\
     "1.2.1;1.16.6"\
+    "1.3.0;1.16.6"\
+    "1.3.1;1.17.0"\
+    "1.3.2;1.17.3"\
+    "1.3.3;1.18.2"\
 )
+
+git pull
+git pull --tags
 
 for python_version in ${PYTHONS[@]}; do
   for g in ${SCIPYS[@]}; do
@@ -94,8 +97,8 @@ EOM
     git push --delete origin ${docker_tag}
     git commit -m "Generating docker for ${docker_tag}" ${docker_file} Dockerfile
     git tag -a ${docker_tag} -m ${docker_tag}
+    git push origin
+    git push origin --tags
   done;
 done
-git push origin
-git push origin --tags
 
