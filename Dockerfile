@@ -1,9 +1,9 @@
-FROM python:2.7.18-alpine3.10
+FROM python:2.7.18-alpine3.11
 
 MAINTAINER martin@majlis.cz
 LABEL maintainer=martin@majlis.cz
 
-LABEL python=2.7.18-alpine3.10
+LABEL python=2.7.18-alpine3.11
 LABEL scipy=1.2.1
 LABEL numpy=1.16.6
 RUN apk add --update build-base gcc g++ make bash curl coreutils automake openblas openblas-dev
