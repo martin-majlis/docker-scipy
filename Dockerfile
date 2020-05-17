@@ -1,10 +1,10 @@
-FROM python:3.8.2-alpine3.10
+FROM python:3.8.2-alpine3.11
 
 MAINTAINER martin@majlis.cz
 LABEL maintainer=martin@majlis.cz
 
-LABEL python=3.8.2-alpine3.10
-LABEL scipy=1.3.1
-LABEL numpy=1.17.0
+LABEL python=3.8.2-alpine3.11
+LABEL scipy=1.2.1
+LABEL numpy=1.16.6
 RUN apk add --update build-base gcc g++ make bash curl coreutils automake openblas openblas-dev
-RUN pip install scipy==1.3.1 numpy==1.17.0
+RUN pip install scipy==1.2.1 numpy==1.16.6
