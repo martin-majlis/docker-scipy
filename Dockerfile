@@ -1,9 +1,9 @@
-FROM python:3.5.9-stretch
+FROM python:3.5.9-buster
 
 MAINTAINER martin@majlis.cz
 LABEL maintainer=martin@majlis.cz
 
-LABEL python=3.5.9-stretch
-LABEL scipy=1.3.1
-LABEL numpy=1.17.0
-RUN pip install scipy==1.3.1 numpy==1.17.0
+LABEL python=3.5.9-buster
+LABEL scipy=1.2.1
+LABEL numpy=1.16.6
+RUN pip install scipy==1.2.1 numpy==1.16.6
